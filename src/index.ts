@@ -19,7 +19,7 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    newRecipe(input: RecipeInput!): Recipe!
+    addRecipe(input: RecipeInput!): Recipe!
   }
 `;
 
@@ -35,7 +35,7 @@ const resolvers = {
     }
   },
   Mutation: {
-    newRecipe: async (_, args) => {
+    addRecipe: async (_, args) => {
       try {
         const { input } = args;
         const recipe = new Recipe();
