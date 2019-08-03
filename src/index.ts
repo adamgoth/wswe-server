@@ -5,6 +5,7 @@ import { Recipe } from "./entity/Recipe";
 
 const typeDefs = gql`
   type Recipe {
+    id: String
     title: String
     link: String
   }
